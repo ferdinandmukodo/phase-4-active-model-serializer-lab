@@ -35,6 +35,5 @@ group :test do
   gem 'rspec-json_expectations'
   gem 'shoulda-matchers', '~> 4.0'
 end
-
-gem 'faker', '~> 2.17'
 gem 'active_model_serializers'
+gem 'faker', '~> 2.17'
