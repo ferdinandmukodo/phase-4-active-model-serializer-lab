@@ -1,16 +1,16 @@
-cclass AuthorsController < ApplicationController
+class AuthorsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
   def index
     authors = Author.all 
-    render json: authors, include: ['profile', 'posts', 'posts.tags']
+    render json: authors
   end
 
   def show
     author = Author.find(params[:id])
-    render json: author, include: ['profile', 'posts', 'posts.tags']
+    render json: author
   end
-  #  private method initialized
+
   private
 
   def render_not_found_response
